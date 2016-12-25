@@ -56,4 +56,4 @@ before_script:
 script: make -j4 && make check && make test
 
 after_script:
-     - COVERALLS_REPO_TOKEN=cigPROgo4AkcKXZmDGlCYBbv2E365kd23 '$([ "$TRAVIS_OS_NAME" == "osx" ] && echo ~/Library/Python/2.7 || echo ~/.local)/bin/cpp-coveralls --gcov-options "\-lp"'
+     - COVERALLS_REPO_TOKEN=cigPROgo4AkcKXZmDGlCYBbv2E365kd23 ~/.local/bin/cpp-coveralls --gcov-options '\-lp'
