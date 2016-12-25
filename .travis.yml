@@ -56,14 +56,5 @@ before_script:
 
 script: make -j4 && make check && make test
 
-addons:
-   coverity_scan:
-       project:
-           name: "bluebore/bfs"
-       notification_email: yanshiguang02@baidu.com
-       build_command_prepend: "make clean"
-       build_command: "make -j4"
-       branch_pattern: master
-
-after_success:
+after_script:
      - COVERALLS_REPO_TOKEN=cigPROgo4AkcKXZmDGlCYBbv2E365kd23 coveralls --exclude lib --exclude tests --gcov-options '\-lp'
