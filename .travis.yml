@@ -58,4 +58,4 @@ before_script:
 script: make -j4 && make check && make test
 
 after_script:
-     - COVERALLS_REPO_TOKEN=cigPROgo4AkcKXZmDGlCYBbv2E365kd23 sudo ~/.local/bin/cpp-coveralls --gcov-options '\-lpr'
+     - COVERALLS_REPO_TOKEN=cigPROgo4AkcKXZmDGlCYBbv2E365kd23 sudo ~/.local/bin/cpp-coveralls -e thirdparty/ -e src/proto --gcov-options '\-lpr'
