@@ -48,6 +48,7 @@ install:
 
 before_script:
     - export WORK_DIR=`pwd`
+    - echo $WORK_DIR
     - echo "SNAPPY_PATH=$(WORK_DIR)/thirdparty/snappy" > depends.mk
     - echo "PROTOBUF_PATH=$(WORK_DIR)/thirdparty/protobuf" >> depends.mk
     - echo "PROTOC=protoc" >> depends.mk
