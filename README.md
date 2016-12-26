@@ -2,6 +2,7 @@
 ======
 
  [![Build Status](https://travis-ci.org/baidu/bfs.svg?branch=master)](https://travis-ci.org/baidu/bfs)  [![Build Status](https://scan.coverity.com/projects/8135/badge.svg)](https://scan.coverity.com/projects/myawan-bfs-1/) 
+ [![Coverage Status](https://coveralls.io/repos/github/yvxiang/coverage_for_bfs/badge.svg?branch=fix_travis)](https://coveralls.io/github/yvxiang/coverage_for_bfs?branch=fix_travis)
 
 The Baidu File System (BFS) is a distributed file system designed to support real-time applications. Like many other distributed file systems, BFS is highly fault-tolerant. But different from others, BFS provides low read/write latency while maintaining high throughput rates. Together with [Galaxy](https://github.com/baidu/galaxy) and [Tera](http://github.com/baidu/tera), BFS supports many real-time products in Baidu, including Baidu webpage database, Baidu incremental indexing system, Baidu user behavior analysis system, etc.
 
