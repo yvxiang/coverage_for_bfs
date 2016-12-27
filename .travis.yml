@@ -49,7 +49,8 @@ install:
 before_script:
     - export WORK_DIR=`pwd`
     - echo $WORK_DIR
-    - echo "SNAPPY_PATH=$WORK_DIR/thirdparty/snappy" > depends.mk
+    - echo "WORK_PATH=$WORK_DIR" > depends.mk
+    - echo "SNAPPY_PATH=$WORK_DIR/thirdparty/snappy" >> depends.mk
     - echo "PROTOBUF_PATH=$WORK_DIR/thirdparty/protobuf" >> depends.mk
     - echo "PROTOC=protoc" >> depends.mk
     - echo "PBRPC_PATH=$WORK_DIR/thirdparty/sofa-pbrpc/output" >> depends.mk
