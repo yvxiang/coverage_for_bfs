@@ -49,13 +49,13 @@ install:
 before_script:
     - export WORK_DIR=`pwd`
     - echo $WORK_DIR
-    - echo "SNAPPY_PATH=$(WORK_DIR)/thirdparty/snappy" > depends.mk
-    - echo "PROTOBUF_PATH=$(WORK_DIR)/thirdparty/protobuf" >> depends.mk
+    - echo "SNAPPY_PATH=$WORK_DIR/thirdparty/snappy" > depends.mk
+    - echo "PROTOBUF_PATH=$WORK_DIR/thirdparty/protobuf" >> depends.mk
     - echo "PROTOC=protoc" >> depends.mk
-    - echo "PBRPC_PATH=$(WORK_DIR)/thirdparty/sofa-pbrpc/output" >> depends.mk
-    - echo "TCMALLOC_PATH=$(WORK_DIR)/thirdparty" >> depends.mk
-    - echo "COMMON_PATH=$(WORK_DIR)/common/output" >> depends.mk
-    - echo "LEVELDB_PATH=$(WORK_DIR)/thirdparty" >> depends.mk
+    - echo "PBRPC_PATH=$WORK_DIR/thirdparty/sofa-pbrpc/output" >> depends.mk
+    - echo "TCMALLOC_PATH=$WORK_DIR/thirdparty" >> depends.mk
+    - echo "COMMON_PATH=$WORK_DIR/common/output" >> depends.mk
+    - echo "LEVELDB_PATH=$WORK_DIR/thirdparty" >> depends.mk
 
 script: make -j4 && make check && make test
 
