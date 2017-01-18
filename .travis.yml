@@ -31,7 +31,7 @@ install:
     - sudo apt-get install zlib1g-dev
 
     - git clone https://github.com/baidu/sofa-pbrpc 
-    - ( cd sofa-pbrpc && echo "PROTOBUF_DIR=$DEPS_PREFIX" >> depends.mk && echo "PREFIX=$DEPS_PREFIX" >> depends.mk  && make -j4 && make install);
+    - ( cd sofa-pbrpc && echo "PROTOBUF_DIR=$DEPS_PREFIX" >> depends.mk && echo "PREFIX=$DEPS_PREFIX" >> depends.mk  && make -j4 && sudo make install);
 
     - wget https://github.com/gflags/gflags/archive/v2.1.2.tar.gz
     - tar xf v2.1.2.tar.gz
@@ -52,7 +52,7 @@ install:
     - ( cd gperftools-2.2.1 && ./configure --with-pic && make -j4 && sudo make install && sudo ldconfig )
 
     - git clone --depth=1 https://github.com/lylei/leveldb.git leveldb
-    - ( cd leveldb && echo "PREFIX=../thirdparty" > config.mk && make -j4 && make install)
+    - ( cd leveldb && echo "PREFIX=../thirdparty" > config.mk && make -j4 && sudo make install)
 
 
 before_script:
